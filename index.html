@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        .visual{
+            width: 1920px;
+            background-image: url(./img/축구장.jpg);
+        }
+        .visual .inner{
+            width: 1400px;
+            margin: auto;
+            /* background-color: skyblue; */
+            height: 1080px;
+            position: relative;
+        }
+        .visual .txt_box{
+            width: 900px;
+            height: 350px;
+            top: 300px;
+            right: 0;
+            /* background-color: rgb(143, 143, 143); */
+            position: absolute;
+        }
+        .visual .title{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 48px;
+            color: #43FF5C;
+            /* outline: solid 1px red; */
+            width: fit-content;
+        }
+        .visual .son{
+            position: absolute;
+            bottom: 0;
+            left: -30px;
+        }
+        .visual .son img{
+            height: 900px;
+        }
+        .visual .txt{
+            position: absolute;
+            left: 0;
+            top: 150px;
+            width: fit-content;
+            height: fit-content;
+            /* outline: solid 1px red; */
+        }
+        .visual .txt p{
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: #fff;
+        }
+        .visual .btn{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .visual .btn button{
+            width: 220px;
+            height: 60px;
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            border: none 0;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .visual button:hover{
+            background-color: #d3d3d3;
+        }
+    </style>
+</head>
+<body>
+    <section class="visual">
+        <div class="inner">
+            
+            <div class="son fade-in">
+                <img src="img/손흥민.png" alt="" class="cup1 image">
+            </div>
+        <div class="txt_box">
+            <div class="title fade-in">
+                <h1>손흥민이 'Pick'한 면도기는?</h1>
+            </div>
+            <div class="txt fade-in">
+                <p>손흥민과 질레트, 더 날카로운 승리를 위한 선택 <br> 
+                    질레트와 함께라면, 당신도 필드 위의 MVP가 될 수 있습니다</p>
+            </div>
+            <div class="btn fade-in">
+                <button>제품 알아보기</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        const fadeEls = document.querySelectorAll('.visual .fade-in');
+        gsap.from(fadeEls, {
+            duration: 5,
+            scale: .8,
+            ease: 'power4',
+            opacity: 0,
+            stagger: 0.7
+        })
+    </script>
+</body>
+</html>
